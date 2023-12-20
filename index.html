@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Vibrating Heart</title>
+</head>
+<body>
+    <div id="page1">
+        <h1>Merry Christmas!</h1>
+        <button onclick="goToHeartbeat()">Open Your Little Reminder</button>
+    </div>
+
+    <div id="page2" style="display: none;">
+        <div class="heart" id="interactiveHeart"></div>
+        <p class="message">Even if you are far away, you are close to my heart. I LOVE YOU JESS!</p>
+    </div>
+
+    <script>
+        function goToHeartbeat() {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+
+            const heart = document.getElementById('interactiveHeart');
+            heart.classList.add('pulse');
+        }
+    </script>
+</body>
+</html>
