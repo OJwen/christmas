@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1522;
+}
+
+.heart {
+    width: 70px;
+    height: 70px;
+    background: #f20044;
+    position: relative; /* Change to relative */
+    margin-left: 410px;
+    margin-bottom: 45px;
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80% {
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.9);
+    }
+}
+
+.heart:before{
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #f20044;
+  top: -50%;
+  border-radius: 50px;
+  box-shadow: -10px -10px 90px #f20044;
+}
+
+.heart:after{
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: #f20044;
+  right: -50%;
+  border-radius: 50px;
+  box-shadow: 10px 10px 90px #f20044;
+}
+
+#page1 {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#page2 {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.message {
+    margin-left: 10px; /* Add margin for space */
+    font-size: 30px;
+}
